@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="./settings.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Settings</h1>
+    <button onclick="window.location.href='dashboard.html'">⬅ Back to Dashboard</button>
+  </header>
+
+  <main class="settings-container">
+    <!-- Dark Mode Section -->
+    <section class="settings-card">
+      <h2>Appearance</h2>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+      <p>Toggle Dark Mode</p>
+    </section>
+
+    <!-- Notifications Section -->
+    <section class="settings-card">
+      <h2>Notifications</h2>
+      <label>
+        <input type="checkbox" id="emailNotif" checked>
+        Email Notifications
+      </label><br>
+      <label>
+        <input type="checkbox" id="smsNotif">
+        SMS Notifications
+      </label>
+    </section>
+
+    <!-- Language Section -->
+    <section class="settings-card">
+      <h2>Language</h2>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+      </select>
+    </section>
+  </main>
+
+  <script src="./settings.js"></script>
+</body>
+</html>

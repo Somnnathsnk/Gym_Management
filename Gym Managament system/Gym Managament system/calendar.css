@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+}
+
+.header {
+  background: #4a90e2;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header button {
+  background: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  color: #4a90e2;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.calendar-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  flex: 2;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header button {
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#monthYear {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day-name {
+  font-weight: bold;
+  text-align: center;
+  color: #4a90e2;
+}
+
+.day {
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 0.6rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.day:hover {
+  background: #e0ebff;
+  transform: scale(1.05);
+}
+
+.today {
+  background: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+.holiday {
+  background: #ffefef;
+  border: 2px solid #ff6b6b;
+}
+
+.holiday::after {
+  content: "🎉";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 14px;
+}
+
+.holiday-list {
+  background: white;
+  flex: 1;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.holiday-list h3 {
+  margin-bottom: 1rem;
+}
+
+.holiday-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.holiday-list li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+.holiday-list li:last-child {
+  border-bottom: none;
+}

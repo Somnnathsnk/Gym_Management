@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Calendar</title>
+  <link rel="stylesheet" href="./calendar.css">
+</head>
+<body>
+  <header class="header">
+    <h1>📅 Smart Calendar</h1>
+    <button onclick="window.location.href='dashboard.html'">⬅ Back</button>
+  </header>
+
+  <main>
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button id="prev">&#9665;</button>
+        <h2 id="monthYear"></h2>
+        <button id="next">&#9655;</button>
+      </div>
+      <div class="calendar-grid">
+        <div class="day-name">Sun</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+        <!-- Days will be generated dynamically -->
+      </div>
+    </div>
+
+    <aside class="holiday-list">
+      <h3>🎉 National Holidays</h3>
+      <ul id="holidayList"></ul>
+    </aside>
+  </main>
+
+  <script src="./calendar.js"></script>
+</body>
+</html>

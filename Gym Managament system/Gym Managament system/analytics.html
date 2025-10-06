@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics</title>
+  <link rel="stylesheet" href="./analystics.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>📊 Analytics Dashboard</h1>
+    <button onclick="window.location.href='dashboard.html'">⬅ Back</button>
+  </header>
+
+  <main class="container">
+    <!-- KPI Cards -->
+    <section class="kpi">
+      <div class="card">
+        <h3>Total Users</h3>
+        <p id="totalUsers">2,350</p>
+      </div>
+      <div class="card">
+        <h3>Active Sessions</h3>
+        <p id="activeSessions">187</p>
+      </div>
+      <div class="card">
+        <h3>Revenue</h3>
+        <p id="revenue">$12,480</p>
+      </div>
+      <div class="card">
+        <h3>Conversion Rate</h3>
+        <p id="conversion">4.7%</p>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts">
+      <div class="chart-box">
+        <h3>User Growth</h3>
+        <canvas id="userGrowthChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Revenue Trend</h3>
+        <canvas id="revenueChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Sessions by Device</h3>
+        <canvas id="deviceChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="./analytics.js"></script>
+</body>
+</html>

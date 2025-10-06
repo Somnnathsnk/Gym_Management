@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="./notifications.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Notifications</h1>
+    <button onclick="window.location.href='dashboard.html'">⬅ Back</button>
+  </header>
+
+  <main class="notifications-container">
+    <div class="notification info">
+      <h3>New Update Available</h3>
+      <p>Version 2.0 is ready to install. Upgrade now for better performance.</p>
+      <span class="time">2 mins ago</span>
+    </div>
+
+    <div class="notification success">
+      <h3>Profile Updated</h3>
+      <p>Your profile information has been successfully updated.</p>
+      <span class="time">10 mins ago</span>
+    </div>
+
+    <div class="notification warning">
+      <h3>Password Expiring Soon</h3>
+      <p>Your password will expire in 5 days. Please update it.</p>
+      <span class="time">1 hour ago</span>
+    </div>
+
+    <div class="notification danger">
+      <h3>Suspicious Login</h3>
+      <p>We detected a login attempt from an unknown device.</p>
+      <span class="time">3 hours ago</span>
+    </div>
+  </main>
+
+  <script src="./notifications.js"></script>
+</body>
+</html>

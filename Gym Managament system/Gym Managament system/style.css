@@ -1,0 +1,174 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("./GYMPHOTO.jpeg");
+  background-size: cover;
+  background-position: center;
+  animation: bgMove 20s ease infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+/* Form */
+.login_form {
+  background: rgba(238, 66, 215, 0.6); /* Changed login box color */
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  backdrop-filter: brightness(10px); /* fixed */
+  padding: 40px 30px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.login_form:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.login_title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Input Box */
+.input_box {
+  margin: 20px 0;
+  position: relative;
+}
+
+.input_box input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 14px 14px 14px 45px;
+  border-radius: 50px;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.input_box input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input_box input:focus {
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.input_box i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Remember & Forgot */
+.remember_forget_box {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 20px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.remember_forget_box input {
+  accent-color: #fff;
+  cursor: pointer;
+}
+
+.remember_forget_box a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.remember_forget_box a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.login_btn {
+  width: 100%;
+  padding: 12px 0;
+  background: #0b87ec;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login_btn:hover {
+  background: #fff;
+  color: #0b87ec;
+}
+
+/* Register Text */
+.register {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.register a {
+  color: #0b87ec;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* Messages */
+.created, .error {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.created {
+  background: rgba(0, 200, 100, 0.85);
+}
+
+.error {
+  background: rgba(200, 0, 50, 0.85);
+}

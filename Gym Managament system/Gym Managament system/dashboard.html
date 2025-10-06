@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>MyApp</h2>
+    <nav>
+      <a href="./analytics.html">📊 Analytics</a>
+      <a href="./calendar.html">📅 Calendar</a>
+      <a href="./notifications.html">🔔 Notifications</a>
+      <a href="./profile.html">👤 Profile</a>
+      <a href="./tasks.html">✅ Tasks</a>
+      <a href="./settings.html">⚙️ Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    <header class="topbar">
+      <h1>Dashboard</h1>
+    </header>
+
+    <!-- Analytics -->
+    <section id="analytics" class="section">
+      <h2>Analytics Overview</h2>
+      <div class="cards">
+        <div class="card">Users <span id="users-count">1,245</span></div>
+        <div class="card">Sales <span id="sales-count">$9,430</span></div>
+        <div class="card">Growth <span id="growth-percent">+18%</span></div>
+      </div>
+      <canvas id="analyticsChart" height="100"></canvas>
+    </section>
+
+    <!-- Calendar -->
+    <section id="calendar" class="section">
+      <h2>Calendar</h2>
+      <div id="calendar-box"></div>
+    </section>
+
+    <!-- Notifications -->
+    <section id="notifications" class="section">
+      <h2>Recent Notifications</h2>
+      <ul class="notif-list">
+        <li>🔔 New user joined</li>
+        <li>🔔 Sales report updated</li>
+        <li>🔔 Profile settings changed</li>
+      </ul>
+    </section>
+
+    <!-- Profile -->
+    <section id="profile" class="section">
+      <h2>User Profile</h2>
+      <div class="profile-card">
+        <img src="https://via.placeholder.com/100" alt="User">
+        <h3>John Doe</h3>
+        <p>Email: john@example.com</p>
+        <p>Role: Admin</p>
+      </div>
+    </section>
+
+    <!-- Tasks -->
+    <section id="tasks" class="section">
+      <h2>Tasks</h2>
+      <ul class="task-list" id="taskList">
+        <li><input type="checkbox"> Finish dashboard design</li>
+        <li><input type="checkbox"> Update profile page</li>
+        <li><input type="checkbox"> Fix notifications bug</li>
+      </ul>
+      <input type="text" id="newTaskInput" placeholder="Add new task">
+      <button onclick="addTask()">Add Task</button>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings" class="section">
+      <h2>Settings</h2>
+      <label>
+        Dark Mode:
+        <input type="checkbox" id="darkModeToggle">
+      </label>
+    </section>
+  </main>
+
+  <script src="./dashboard.js"></script>
+</body>
+</html>
